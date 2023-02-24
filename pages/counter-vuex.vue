@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import Counter from "~/components/Counter.vue";
+import Counter from "~/components/vuex/Counter.vue";
 export default {
   components: {
     Counter,

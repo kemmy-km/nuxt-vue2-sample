@@ -1,18 +1,22 @@
 <template>
   <div>
-    <GlobalNav />
+    <Header />
 
     <!-- `pages`ディレクトリ配下に存在するvueファイルの内容 -->
-    <Nuxt />
+    <Nuxt class="global" />
+
+    <Footer />
   </div>
 </template>
 
 <script>
-import GlobalNav from "~/components/GlobalNav.vue";
+import Header from "~/components/Header.vue";
+import Footer from "~/components/Footer.vue";
 
 export default {
   components: {
-    GlobalNav,
+    Header,
+    Footer,
   },
 };
 </script>
@@ -66,6 +70,11 @@ html {
   background-color: #35495e;
 }
 
+.global {
+  padding: 1rem 2rem;
+  min-height: 90vh;
+}
+
 .mt-1 {
   margin-top: 1rem;
 }
@@ -76,6 +85,9 @@ html {
   margin-top: 4rem;
 }
 
+.mb-1 {
+  margin-bottom: 1rem;
+}
 .mb-2 {
   margin-bottom: 2rem;
 }

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h2>アンケート</h2>
+
     <form @submit.prevent>
       <div>
         お名前：
@@ -70,7 +72,10 @@
         <p class="message">ご意見： {{ message }}</p>
       </div>
 
-      <button type="submit" @click="confirmModal">アンケートを終了する</button>
+      <!-- v-onを使用したクリックイベント発火 -->
+      <button type="submit" v-on:click="confirmModal" class="mt-1">
+        アンケートを終了する
+      </button>
     </form>
   </div>
 </template>
@@ -80,7 +85,6 @@ export default {
   data() {
     return {
       userData: {
-        // 初期値を入れる
         name: "",
       },
       gender: "",
@@ -92,8 +96,13 @@ export default {
   },
   methods: {
     confirmModal: function () {
-      if (confirm("終了してよろしいですか？")) {
-        // location.href = "/";
+      if (
+        confirm(
+          "終了してよろしいですか？\n（このモーダルは`v-on`ディレクティブを使用して出現させています）"
+        )
+      ) {
+        // トップに戻る
+        this.$router.push("/");
       }
     },
   },
