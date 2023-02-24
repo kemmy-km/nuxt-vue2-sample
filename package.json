@@ -1,0 +1,21 @@
+{
+  "name": "nuxt-vuex",
+  "version": "1.0.0",
+  "description": "My lovely Nuxt.js project",
+  "author": "naka",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
